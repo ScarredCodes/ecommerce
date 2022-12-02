@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { useRouter } from "next/router";
-
 import data from "/utils/data";
 import Layout from "../../components/Layout";
 import Link from "next/link";
@@ -9,6 +8,8 @@ import { Store } from "../../utils/Store";
 
 const ProductScreen = () => {
   const { state, dispatch } = useContext(Store);
+
+  const router = useRouter();
 
   const { query } = useRouter();
   const { slug } = query;
@@ -30,6 +31,7 @@ const ProductScreen = () => {
       type: "CART_ADD_ITEM",
       payload: { ...product, quantity },
     });
+    router.push("/cart");
   };
   return (
     <Layout title={product.name}>
