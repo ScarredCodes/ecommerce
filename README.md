@@ -47,3 +47,20 @@
 # Handle Changing Cart Items
 1. add select box for quantity
 2. handle select box change
+
+# Save Cart Items
+1. install js-cookie package
+2. save and retrieve cart items in cookies
+
+# Create Login Form
+1. install react hook form
+2. create input boxes
+3. add login button
+
+# Connect To MongoDB
+1. install mongoose
+2. install mongodb or use mongodb atlas
+3. save connection url in .env file
+4. create db utils file
+5. create sample users
+

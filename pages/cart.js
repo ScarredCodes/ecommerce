@@ -5,6 +5,7 @@ import { XCircleIcon } from "@heroicons/react/24/outline";
 import Layout from "../components/Layout";
 import { Store } from "../utils/Store";
 import { useRouter } from "next/router";
+import dynamic from "next/dynamic";
 
 const CartScreen = () => {
   const router = useRouter();
@@ -104,7 +105,7 @@ const CartScreen = () => {
               <li>
                 <button
                   className="primary-button w-full"
-                  onClick={() => router.push("/shipping")}
+                  onClick={() => router.push("login?redirect=/shipping")}
                 >
                   {" "}
                   Check Out{" "}
@@ -118,4 +119,4 @@ const CartScreen = () => {
   );
 };
 
-export default CartScreen;
+export default dynamic(() => Promise.resolve(CartScreen), { ssr: false });
