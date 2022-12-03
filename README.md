@@ -60,3 +60,11 @@
    2. create nextauth.js
    3. implement signin
    4. use signin in login form
+
+
+# Add User Menu
+   1. check user authentication
+   2. install headlessui
+   3. show user menu
+
+
